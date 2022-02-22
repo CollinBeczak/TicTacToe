@@ -14,10 +14,9 @@ console.log('tojhslkjhdl');
         const [a, b, c] = winningNumbers[i];
         console.log(a);
         if (cells[a] && cells[a] === cells[b] && cells[b] === cells[c]) {
-            setResults(cells[a]); 
+            setResults(`Results: ${cells[a]}`); 
             break;
         } else {
-            console.log('tie');
             setResults('Results: N/A');
         }
     }
