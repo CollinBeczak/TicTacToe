@@ -17,3 +17,8 @@
 .table {
     display: grid;
 }
+
+.container {
+    position: absolute;
+    left: 25%;
+}

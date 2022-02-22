@@ -11,11 +11,11 @@ const Cell = ({ id, turn, setTurn, cells, setCells }) => {
         if (turn === 'X') {
             squares[id] = ('X');
             setTurn('O');
-            console.log('o');
+            console.log('O');
         } else {
             squares[id] = ('O');
             setTurn('X');
-            console.log('x');
+            console.log('X');
         }
 
         console.log(squares);
