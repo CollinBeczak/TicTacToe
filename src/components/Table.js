@@ -6,7 +6,7 @@ import './Table.css';
 const Table = () => {
     const [turn, setTurn] = useState('O');
     const [cells, setCells] = useState(Array(9).fill(''));
-    const [results, setResults] = useState();
+    const [results, setResults] = useState('');
 
     const restartGame = () => {
         if (turn === 'X'){
@@ -14,11 +14,12 @@ const Table = () => {
         } else {
             setTurn('X')
         }
+        setResults('');
         setCells(Array(9).fill(''));
     }
 
     const cellFormat = (id) => {
-        return <Cell id={id} cells={cells} setCells={setCells} turn={turn} setTurn={setTurn} />
+        return <Cell id={id} cells={cells} results={results} setCells={setCells} turn={turn} setTurn={setTurn} />
     }
 
     return (
@@ -43,7 +44,7 @@ const Table = () => {
                     </tr>
                 </tbody>
             </table>
-            <Result cells={cells} results={results} setResults={setResults} ></Result>
+            <Result cells={cells} results={results} setResults={setResults}></Result>
             <button onClick={() => restartGame()}>Play Again</button>
         </div>
     );

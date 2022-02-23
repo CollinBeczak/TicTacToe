@@ -1,3 +1,4 @@
+
 .cell {
     border: 1px solid black;
     height: 120px;
@@ -18,7 +19,3 @@
     display: grid;
 }
 
-.container {
-    position: absolute;
-    left: 25%;
-}

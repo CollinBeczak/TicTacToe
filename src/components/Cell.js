@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Cell = ({ id, turn, setTurn, cells, setCells }) => {
-
+const Cell = ({ id, turn, setTurn, cells, setCells, results }) => {
     const handleClick = ( id ) => {
+        if (results !== '') {
+            return;
+        }
         let squares = [...cells];
         if (squares[id] !== ''){
             return;
