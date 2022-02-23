@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Result = ({ cells, results, setResults }) => {
-
     const winningNumbers = [ [0, 1, 2], 
                              [3, 4, 5],
                              [6, 7, 8], 
@@ -20,6 +19,11 @@ const Result = ({ cells, results, setResults }) => {
                 setResults('');
             };
     }
+
+    if (cells[0] && cells[1] && cells[2] && cells[3] && cells[4]
+        && cells[5] && cells[6] && cells[7] && cells[8] !== '') {
+            setResults('Results: Tie');
+        }
 
         return (
             <div>
