@@ -22,6 +22,22 @@ const Table = () => {
         return <Cell id={id} cells={cells} results={results} setCells={setCells} turn={turn} setTurn={setTurn} />
     }
 
+    const buttonText = () => {
+        if (results !== '') {
+            return "Play Again";
+        } else {
+            return "Reset";
+        }
+    }
+
+    const buttonColor = () => {
+        if (results !== '') {
+            return "green";
+        } else {
+            return "red";
+        }
+    }
+
     return (
         <div className="container">
             <div>Turn: {turn} </div>
@@ -45,7 +61,7 @@ const Table = () => {
                 </tbody>
             </table>
             <Result cells={cells} results={results} setResults={setResults}></Result>
-            <button onClick={() => restartGame()}>Play Again</button>
+            <button className={buttonColor()} onClick={() => restartGame()}>{buttonText()}</button>
         </div>
     );
 }
