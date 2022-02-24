@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Cell from './Cell'
 import Result from './Result';
-import './Table.css';
 
 const Table = () => {
     const [turn, setTurn] = useState('O');
@@ -40,7 +39,7 @@ const Table = () => {
 
     return (
         <div className="container">
-            <div>Turn: {turn} </div>
+            <span className="turnShow">Turn: {turn}!</span>
             <table className="table">
                 <tbody>
                     <tr>
