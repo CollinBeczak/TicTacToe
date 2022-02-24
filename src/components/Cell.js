@@ -13,16 +13,15 @@ const Cell = ({ id, turn, setTurn, cells, setCells, results }) => {
         if (turn === 'X') {
             squares[id] = ('X');
             setTurn('O');
-            console.log('O');
         } else {
             squares[id] = ('O');
             setTurn('X');
-            console.log('X');
         }
 
-        console.log(squares);
         setCells(squares);
+        console.log(cells);
     };
+    
         return (
             <td className="cell" onClick={() => handleClick(id)}>{cells[id]}</td>
         );
