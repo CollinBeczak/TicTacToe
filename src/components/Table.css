@@ -1,6 +1,6 @@
 .container {
     margin: auto;
-    width: 50%;
+    width: auto;
     padding: 10px;
 }
 
@@ -16,7 +16,6 @@
     font-size: 90px;
     vertical-align: middle;
     text-align: center;
-    line-height: 0;
     user-select: none;
 }
 
