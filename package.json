@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "tictactoe": "nodemon index.js",
+    "react-tictactoe": "npm run start --prefix react-tictactoe",
+    "dev": "concurrently \"npm run tictactoe\" \"npm run react-tictactoe\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix react-tictactoe && npm run build --prefix react-tictactoe"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,14 @@
   },
   "homepage": "https://github.com/CollinBeczak/TicTacToe#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.1.0",
+    "cookie-session": "^2.0.0",
+    "express": "^4.17.3",
+    "http-proxy-middleware": "^2.0.4",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.2.10",
+    "passport": "^0.5.2",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
